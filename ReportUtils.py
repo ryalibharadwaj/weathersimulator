@@ -27,7 +27,7 @@ class WeatherConditions(object):
     humidity=randint(70,100)
     return humidity
 
-#Based on Biometric formula based on elevation. Returns temperture in Celsius.
+#Based on Barometric formula based on elevation. Returns temperture in Celsius.
   def get_temperature(self, elev): 
     elev = float(elev)/1000
     if (elev <= 11):
@@ -63,7 +63,7 @@ class WeatherConditions(object):
     EARTH_RADIUS = 6356.766
     return EARTH_RADIUS * elev / (EARTH_RADIUS + elev)
 
-#Function to get pessure of location based on its elevation and temperature. Calculation is based on Biometric formula.
+#Function to get pessure of location based on its elevation and temperature. Calculation is based on Barometric formula.
   def get_pressure(self,elev):
     elev = float(elev)
     geopot_elev = self.get_geopotential(elev)
