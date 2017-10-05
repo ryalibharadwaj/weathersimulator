@@ -6,6 +6,22 @@ from datetime import datetime
 from math import pow,exp
 
 class WeatherConditions(object):
+#Generate Sample Latitude and Longitude Values
+  def get_latitudelongitude(self,lat,lon):
+    radius = 1000000 #Sample radius value in meters
+    radiusInDegrees = radius/111300#A degree has 111300 meters. Convert radius to degrees.
+    x0 = lat#Initial Latitude Assumption
+    y0 = lon#Initial Longitude Assumption
+    a = float(random.uniform(0.0,1.0))
+    b = float(random.uniform(0.0,1.0))
+    c = radiusInDegrees * math.sqrt(a)
+    d = 2 * math.pi * b
+    x = c * math.cos(d)
+    y = c * math.sin(d)
+    xLat = x + x0
+    yLong = y + y0
+    return str("{0:.2f}".format(xLat)) + "," + str("{0:.2f}".format(yLong)) 
+
 #Humidity is randomly generated
   def get_humidity(self):
     humidity=randint(70,100)
