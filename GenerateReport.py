@@ -1,3 +1,17 @@
+##################################################################################################################
+##################################################################################################################
+#This program would use two webservices. One webservice is used to get latitude and longitude
+#info based on location details. The other webservice is used to get elevation based on latitude and longitude.
+#Based on elevation the program would call the functions from ReportUtils class inorder to simulate other climate
+#information such as localtime, temperature, pressure, weather and humidity.
+##################################################################################################################
+##################################################################################################################
+#Please Refer to GenerateReport.py under latlongsimulation folder where latitude and longitude values also are
+#simulated and webservice is only used to get the elevation details. ReportUtils class would remain same for both
+#these programs.
+##################################################################################################################
+##################################################################################################################
+
 import sys
 import json
 from math import ceil
