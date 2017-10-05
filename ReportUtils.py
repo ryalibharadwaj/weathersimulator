@@ -80,4 +80,6 @@ class WeatherConditions(object):
         return 'Snow'
     elif  humidity >= 90 and temperature > 0 and pressure < 1000:
         return 'Rain'
+    elif 80 <= humidity < 90 and temperature > 0 and pressure < 1000:
+        return 'Cloudy'
     else: return 'Sunny'
